@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/bf362058f1.js"></script>
+    <link rel="stylesheet" href="apply.css">
+    <title>Course App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #AE0B05;">
+        <a class="navbar-brand" href="#"><i class="fas fa-school"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="apply.html">Ansökan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Studieplan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Schema</a>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-sm" role="button">Logga ut</a>
+        </div>
+    </nav>
+
+    <div class="row mt-3 m-auto">
+        <div class="card col-md-4">
+            <div class="card-body">
+                <h5 class="card-title">Komplettera och skicka ansökan</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Mina val</h6>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Course</th>
+                            <th scope="col">School</th>
+                            <th scope="col">Point</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody onload="loadCourses()" id="komplSelectedCourse">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card col-md-8">
+            <div class="card-body">
+                <form id="formKomplettera">
+                    <h4 class="card-title">Komplettera <mark style="font-size: 12px;" class="text-muted">(* Obligatoriskt fält)</mark> </h4>
+                    <div class="col-md-8 shadow p-3 mb-3 bg-white rounded">
+                        <p class="text-muted">Studiemedel *</p>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="studiemedel1" name="studiemedel" class="custom-control-input">
+                            <label class="custom-control-label" for="studiemedel1">Jag kommer att ansöka om studiemedel</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="studiemedel2" name="studiemedel" class="custom-control-input">
+                            <label class="custom-control-label" for="studiemedel2">Jag kommer inte att ansöka om studiemedel</label>
+                        </div>
+                    </div>
+                    <div class="col-md-8 shadow p-3 mb-3 bg-white rounded">
+                        <p class="text-muted">Studietakt - Skriv önskat startdatum samt om du vill studera på 100, 75, 50 eller 25%. *</p>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="studietakt1" name="studietakt" class="custom-control-input">
+                            <label class="custom-control-label" for="studietakt1">100%</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="studietakt2" name="studietakt" class="custom-control-input">
+                            <label class="custom-control-label" for="studietakt2">75%</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="studietakt3" name="studietakt" class="custom-control-input">
+                            <label class="custom-control-label" for="studietakt3">50%</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="studietakt4" name="studietakt" class="custom-control-input">
+                            <label class="custom-control-label" for="studietakt4">25%</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-8 shadow p-3 mb-3 bg-white rounded">
+                        <p class="text-muted">Motivering - Varför vill du läsa just den här kursen eller utbildningen? *</p>
+                        <div class="form-group">
+                            <textarea class="form-control" id="motivering" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" id="skicka-btn" class="btn btn-primary"><a href="confirm-application.html" onclick="saveMotivering()">Skicka</a></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        loadCourses = function() {
+            if (localStorage.getItem('courseArray') == null) {
+                selectedCourses = [];
+            } else {
+                selectedCourses = JSON.parse(localStorage.getItem('courseArray'));
+                let tr = '';
+                for (let i = 0; i < selectedCourses.length; i++) {
+                    const element = selectedCourses[i];
+                    tr += `
+                        <tr>
+                            <td>${element.course}</td>
+                            <td>${element.school}</td>
+                            <td>${element.points}</td>
+                        </tr>
+                    `;
+                    document.querySelector("#komplSelectedCourse").innerHTML = tr;
+
+                }
+            }
+            return selectedCourses;
+        }
+
+        loadCourses();
+    </script>
+    <script src="apply.js" type="text/Javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

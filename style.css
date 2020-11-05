@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+}
+
+.information-label {
+    width: 200px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.info-span {
+    display: inline-block;
+    height: 20px;
+}
+
+.info-input {
+    display: inline-block;
+    height: 20px;
+}
+
+.obligatory-asterix {
+    color: rgb(235, 12, 12);
+    display: none;
+}
+
+.obligatory-asterix-permenant {
+    color: rgb(235, 12, 12);
+}
+
+.button-div {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#personal-info-container {
+    width: 50%;
+    padding: 20px;
+    margin: auto;
+}
+
+.namn, .kursNamn, .slutDatum {
+    color: blue;
+}
+
+.kurstitle {
+    line-height: 95px;
+}
+
+.certificate:hover {
+    background-color: navy;
+    color: white;
+    transition: 0.3s;
+}
+
+.modal-box {
+    box-sizing: content-box;
+    border: double 10px rgb(55, 91, 237);
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    outline: 8px solid white;
+    padding: 50px 5px;
+}
+
+.close {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+.certificate {
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(55, 91, 237);
+    flex: 1;
+    cursor: pointer;
+    margin: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#certificates-container {
+    display: flex;
+}
+
+.certificate-page-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.img_style {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.modal-box h4 {
+    margin-top: -10px;
+}
+
+#schedule-table, tr, td, th {
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+td, th {
+    width: 150px;
+}
+
+footer {
+    padding: 30px 0px;
+    background-color: #f4f4f4;
+    color: #424242;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+    padding: 30px 0px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-part-container {
+    flex: 1;
+    margin-left: 10px;
+    padding-bottom: 30px;
+}
+
+.footer-link {
+    color: #424242;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: darkgoldenrod;
+}
+
+.footer-logo {
+    position: relative;
+    right: 10%;
+}
+
+#schedule-table {
+    margin: 50px auto;
+}
+
+.komvux-title {
+    color: #ae0b05;
+    float: right;
+    margin-right: 40px;
+    margin-top: 25px;
+}
+
+.header-bar {
+    background-color: #ae0b05;
+    padding: 20px;
+    color: white;
+    font-size: 1.3em;
+    width: 100%;
+}
+
+.kurser-btn {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.kurser-btn a, #skicka {
+    text-decoration: none;
+    color: white;
+}
+
+.kurser-btn:hover {
+    text-decoration: underline;
+}
+
+/* navigation bar*/
+
+.sticky {
+    /*position: -webkit-sticky;*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.student-info-btn {
+    display: inline-block;
+}
+
+.personal-number {
+    /*display:none;              //ADD A FUNCTION TO DISPLAY/HIDE THIS    */
+    float: right;
+    margin-left: 10px;
+}
+
+.student-text {
+    cursor: pointer;
+}
+
+.student-text:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    float: right;
+    margin-top: 2px;
+}
+
+.home-intro, .thanks-paragraph {
+    font-size: 1.2em;
+    width: 75%;
+    margin: 50px auto;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.slider-img {
+    min-height: 675px;
+}
+
+/* Slide show Next & previous buttons */
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Slide show Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Slider text */
+
+.slider-text {
+    color: white;
+    font-size: 1.2em;
+    padding: 30px 30px;
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-text h6 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+/* courses webpage  box-model links*/
+
+.courses {
+    width: 250px;
+    height: 320px;
+    border: 2px solid maroon;
+    padding: 20px;
+    margin: 20px;
+    float: right;
+    transition: all 1s ease;
+}
+
+.courses a {
+    color: black;
+}
+
+.courses:hover {
+    background-color: rgb(255, 226, 226);
+    transform : scale(1.05);
+}
+
+/* individual coursse page*/
+
+/* for apply button*/
+
+.apply {
+    background-color: brown;
+    width: 100px;
+    height: auto;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.apply a {
+    text-decoration: none;
+    color: white;
+}
+
+/* for main image*/
+
+.text {
+    width: 80%;
+    margin: auto;
+}
+
+.image {
+    margin: auto;
+    width: 100%;
+    height: 500px;
+}
+
+.review-page-content {
+    width: 80%;
+    margin: auto;
+}
+
+.table-container {
+    flex: 1;
+    max-width: 80%;
+    margin: auto;
+}
+
+.mt-3, .review-page-content {
+    margin-top: 50px;
+}
+
+.courses-table {
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.bold-text {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wide-field {
+    width: auto;
+}
+
+.final-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.thanks-header, .thanks-paragraph {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.box-3-line {
+    min-width: 30%;
+    margin: 20px;
+    border: 1px solid #e5e5e5;
+    color: #252525;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .08);
+    border-radius: 2px;
+    flex: 1;
+}
+
+.box-item-3-line {
+    text-decoration: none;
+    color: black;
+    display: block;
+    line-height: 24px;
+    font-size: 10px;
+}
+
+.box-content-3-line {
+    padding: 15px;
+    font-size: 15px;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.box-3-line:hover {
+    background-color: #e5e5e5;
+    transition: .3s
+}
+
+.box-link-3-line {
+    color: rgba(0, 0, 0, .4);
+    font-size: 15px;
+    margin: -2px 0px 0px;
+    padding: 0px 20px 9.5px 0px;
+}
+
+.box-container-3-line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-container {
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+.grid-left {
+    max-width: 23%;
+    flex: 1;
+}
+
+.grid-right {
+    flex: 1;
+    max-width: 76%;
+}
+
+.courses a {
+    text-decoration: none;
+}
+
+.accordion-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.list-group {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    /*background-color: #dadada;*/
+    background-color: honeydew;
+    display: none;
+    height: auto;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 10px;
+}
+
+.accordion-panel ul {
+    margin-left: 30px;
+    list-style-type: none;
+    background-color: honeydew;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-panel ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-panel ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion-panel ul a:hover {
+    text-decoration: underline;
+}
+
+#myMenu>button.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+}
+/* Display obligatorisk warning msg*/
+
+#displaymsg {
+    color: red;
+}
+
+.personal-number {
+    display: none;
+}
+
+/*--------Calendar style----------------*/
+
+.day {
+    background-color: #e5e5e5;
+}
+
+.time {
+    background-color: #e5e5e5;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="reviewApplicationScript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="apply.css">
+    <title>Ansöka</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="http://www2.renaremark.se/wp-content/uploads/2017/08/helsingborg.png"></a>
+        <h1 class="komvux-title">Komvux Helsingborg </h1>
+    </header>
+    <nav class="header-bar sticky">
+        <div class="kurser-btn"><a href="course info.html">Kurser</a></div>
+        <div class="kurser-btn"><a href="student-home.html">Elever Infomation</a></div>
+        <form class="search-bar" target="_blank">
+            <input type="search" id="gsearch" name="gsearch" size="20">
+            <input type="submit" value="Sök">
+        </form>
+    </nav>
+    <div class="review-page-content">
+        <h1>Kontaktinformation</h1>
+        <div class="information-div">
+            <label for="personal-number" class="information-label">Personnummer</label>
+            <span id="personnummer" class="info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="forrnamn" class="information-label">Förrnamn</label>
+            <span id="forrnamn" class="info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="efternamn" class="information-label">Efternamn</label>
+            <span id="efternamn" class="info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="adress" class="information-label">Adress <span class="obligatory-asterix">*</span></label>
+            <span id="adress" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="co-adress" class="information-label">C/O Adress</label>
+            <span id="coAdress" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="postnummer" class="information-label">Postnummer <span
+                    class="obligatory-asterix">*</span></label>
+            <span id="postnummer" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="ort" class="information-label">Ort <span class="obligatory-asterix">*</span></label>
+            <span id="ort" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="telefon" class="information-label">Telefon</label>
+            <span id="telefon" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="telefon-mobil" class="information-label">Telefon mobil <span
+                    class="obligatory-asterix">*</span></label>
+            <span id="telefonMobil" class="edit-me info-span"></span>
+
+        </div>
+        <div class="information-div">
+            <label for="email" class="information-label">E-postadress <span class="obligatory-asterix">*</span></label>
+            <span id="email" class="edit-me info-span"></span>
+
+        </div>
+        <div class="information-div">
+            <label for="bekräfta-email" class="information-label">Bekräfta e-postadress <span
+                    class="obligatory-asterix">*</span></label>
+            <span id="confirmEmail" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="hemkommun" class="information-label">Hemkommun <span class="obligatory-asterix">*</span></label>
+            <span id="hemkommun" class="edit-me info-span"></span>
+        </div>
+        <div class="information-div">
+            <label for="modersmal" class="information-label">Modersmål</label>
+            <span id="modersmal" class="info-span"></span>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="table-container">
+            <div class="card-body">
+                <h2 class="card-title">Mina val</h2>
+                <h4 class="card-subtitle">Sökt kurser</h4>
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Course</th>
+                            <th scope="col">School</th>
+                            <th scope="col">Point</th>
+                        </tr>
+                    </thead>
+                    <tbody id="selectedCourseList">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="table-container">
+            <div class="card-body">
+                <h2 class="card-title">Kurs Motivering</h2>
+                <table class="courses-table">
+                    <tbody id="motiveringList">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="button-div">
+        <button class="final-button"><a href="thank-you.html">Confirm Application</a></button>
+        <button class="final-button"><a href="index.html">Cancel</a></button>
+    </div>
+    <br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html"><img src="Images/Helsingborg-Logo-Grey.JPG" alt="Helsingborg Town Logo"></a>
+            </div>
+            <div class="footer-part-container">
+                <h3 class="tel">Telefonnummer</h3>
+                <label type="text" class="kon">Helsingborg kontaktcenter:</label><br>
+                <a class="footer-link" href="tel:042 10 50 00"> 042 10 50 00</a><br><br>
+                <labet type="texk" class="post">E-post</labet><br>
+                <a class="footer-link" href="kontaktcenter@helsingborg.se" target="_blank">kontaktcenter@helsingborg.se
+                </a>
+            </div>
+            <div class="footer-part-container">
+                <h3>Öppettider</h3>
+                <p class="mon">Måndag-torsdag 07.00-1900</p>
+                <p class="mon">Fredag 07.00-17.00</p>
+                <p class="mon">Lördag 10.00-15.00</p>
+            </div>
+            <div class="footer-part-container">
+                <h3>Länker</h3>
+                <a class="footer-link" href="http://www.helsingborg.se/startsida/toppmeny/om-webbplatsen/"
+                    target="_blank">
+                    Om
+                    webbplatsen<br></a><br>
+                <a class="footer-link" href="http://helsingborg.se/arkivbyran/" target="_blank">Du kan söka information
+                    i
+                    webbarkivet</a>
+            </div>
+            <div class="footer-part-container">
+                <h3>Postadress</h3><br><span class="footer-light">Namn på
+                    verksamheten<br>251 89 Helsingborg</span>
+                </p>
+                <p><span class="footer-light">Organisationsnummer: 212000-1157</span></p>
+            </div>
+            <div class="footer-part-container">
+                <h3 class="bes">Besöksadress</h3>
+                <p class="add">Helsingborg stad har besökadress: <br>Helsingborg kontaktcenter Stortorget 17</p>
+                <a class="footer-link" href="http://arcg.is/1NzxgV8" target="_blank">Visa på Karta</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

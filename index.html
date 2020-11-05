@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slider-script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="http://www2.renaremark.se/wp-content/uploads/2017/08/helsingborg.png"></a>
+        <h1 class="komvux-title">Komvux Helsingborg </h1>
+    </header>
+    
+    <nav class="header-bar sticky">
+        <div class="kurser-btn"><a href="course info.html">Kurser</a></div>
+        <form class="student-info-btn" action="student-home.html">
+            <label class="student-text" onclick="visibleFunction()"> Elever Information</label>
+            <div class="personal-number">
+                <input type="text" placeholder="Personnummer">
+                <input type="submit" value="Skicka in">
+            </div>
+        </form>
+        <form class="search-bar" target="_blank">
+            <input type="search" id="gsearch" name="gsearch" size="20">
+            <input type="submit" value="Sök">
+        </form>
+    </nav>
+
+    <p class="home-intro">På Komvux Helsingborg kan du studera svenska för invandrare
+        (sfi), läsa in och komplettera
+        grundskole- och gymnasieämnen eller gå särskild utbildning för vuxna (Lärvux). Du kan välja att läsa på
+        heltid eller deltid. I ett flertal ämnen kan du studera under flexibla former.
+    </p>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="slider-img" src="https://komvux.helsingborg.se/wp-content/uploads/sites/130/2017/05/sfi-800x450.jpg"
+                style="width:100%">
+            <div class="slider-text">
+                <h6>Sfi och SVA Grund</h6>
+                På Komvux Helsingborg kan du läsa utbildning i svenska för invandrare (Sfi studieväg 3)
+                och svenska som andraspråk på grundläggande nivå (SVA Grund delkurs 1-4). Du kan kombinera sfi med
+                arbete, praktik eller andra studier.
+            </div>
+        </div>
+        <div class="mySlides fade" style="display: none;">
+            <img class="slider-img" src="https://komvux.helsingborg.se/wp-content/uploads/sites/130/2019/05/74a0013-800x450.jpg"
+                style="width:100%">
+            <div class="slider-text">
+                <h6> Grundläggande vuxenutbildning </h6>
+                Du som helt eller delvis saknar betyg från grundskolan kan läsa grundläggande
+                vuxenutbildning på Komvux Helsingborg. Vill du repetera en grundskolekurs inför gymnasiestudierna
+                går det också bra.
+            </div>
+        </div>
+        <div class="mySlides fade" style="display: none;">
+            <img class="slider-img" src="https://komvux.helsingborg.se/wp-content/uploads/sites/130/2019/05/grundlaggande-800x450.jpg"
+                style="width:100%">
+            <div class="slider-text">
+                <h6> Gymnasial vuxenutbildning </h6>
+                Du som helt eller delvis saknar betyg från gymnasieskolan kan läsa gymnasial
+                vuxenutbildning. Vill du läsa in gymnasiekurser inför yrkesutbildning, högskolestudier eller arbete
+                kan du göra det på Komvux Helsingborg. Du studerar i grupp dagtid.
+            </div>
+        </div>
+        <div class="mySlides fade" style="display: none;">
+            <img class="slider-img" src="https://images.unsplash.com/photo-1570717173024-ec8081c8f8e9?ixlib=rb-1.2.1
+    &ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 " style="width:100%; height:500px">
+            <div class="slider-text">
+                <h6> Grundläggande programmering </h6>
+                Vill du arbeta inom IT- branschen och behöver utbildning och arbetslivskontakter?
+                Då kan grundläggande programmering ge dig en bra grund för en framtid inom branschen.
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="index.html"><img src="Images/Helsingborg-Logo-Grey.JPG" alt="Helsingborg Town Logo"></a>
+        </div>
+        <div class="footer-part-container">
+            <h3 class="tel">Telefonnummer</h3>
+            <label type="text" class="kon">Helsingborg kontaktcenter:</label><br>
+            <a class="footer-link" href="tel:042 10 50 00"> 042 10 50 00</a><br><br>
+            <labet type="texk" class="post">E-post</labet><br>
+            <a class="footer-link" href="kontaktcenter@helsingborg.se" target="_blank">kontaktcenter@helsingborg.se </a>
+        </div>
+        <div class="footer-part-container">
+            <h3>Öppettider</h3>
+            <p class="mon">Måndag-torsdag 07.00-1900</p>
+            <p class="mon">Fredag 07.00-17.00</p>
+            <p class="mon">Lördag 10.00-15.00</p>
+        </div>
+        <div class="footer-part-container">
+            <h3>Länker</h3>
+            <a class="footer-link" href="http://www.helsingborg.se/startsida/toppmeny/om-webbplatsen/" target="_blank">
+                Om
+                webbplatsen<br></a><br>
+            <a class="footer-link" href="http://helsingborg.se/arkivbyran/" target="_blank">Du kan söka information i
+                webbarkivet</a>
+        </div>
+        <div class="footer-part-container">
+            <h3>Postadress</h3><br><span class="footer-light">Namn på
+                    verksamheten<br>251 89 Helsingborg</span>
+            </p>
+            <p><span class="footer-light">Organisationsnummer: 212000-1157</span></p>
+        </div>
+        <div class="footer-part-container">
+                <h3 class="bes">Besöksadress</h3>
+                <p class="add">Helsingborg stad har besökadress: <br>Helsingborg kontaktcenter Stortorget 17</p>
+                <a class="footer-link" href="http://arcg.is/1NzxgV8" target="_blank">Visa på Karta</a>
+        </div>
+    </div>
+</footer>
+
+</html>

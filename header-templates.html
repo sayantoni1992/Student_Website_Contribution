@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slider-script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="http://www2.renaremark.se/wp-content/uploads/2017/08/helsingborg.png">
+        <h1 class="komvux-title">Komvux Helsingborg </h1>
+    </header>
+    <nav class="header-bar">
+        <div class="dropdown">Kurser
+            <ul class="dropdown-content">
+                <li> <a href="">SVA Grundläggande </a> </li>
+                <li> <a href="">Kurser pa grundläggande nivå motsvarande arkurs 7-9</a> </li>
+                <li> <a href="">Kurser pa gymnasienivå </a> </li>
+                <li> <a href="">Yrkesutbildningar </a> </li>
+            </ul>
+        </div>
+        <form class="student-info-btn" target="_blank">
+            <label class="student-text" onclick="displayStudent()"> Elever Information</label>
+            <div class="personal-number">
+                <input type="text" placeholder="Personnummer">
+                <input type="submit" value="Skicka in">
+            </div>
+        </form>
+        <form class="search-bar" target="_blank">
+            <input type="search" id="gsearch" name="gsearch" size="20">
+            <input type="submit" value="Sök">
+        </form>
+    </nav>
+</body>
+
+</html>
